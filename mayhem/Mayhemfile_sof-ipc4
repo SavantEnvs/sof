@@ -1,0 +1,7 @@
+# SOF firmware IPC4 fuzzer: Zephyr native_sim + libFuzzer (src/platform/posix/fuzz.c), ASan + UBSan.
+project: savantenvs/sof
+target: sof-ipc4
+cmds:
+  - cmd: /mayhem/sof-ipc4
+    libfuzzer: true
+    timeout: 10
