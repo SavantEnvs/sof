@@ -1,0 +1,3 @@
+name: sof-fuzz-lsan
+build:
+  cmake: .
