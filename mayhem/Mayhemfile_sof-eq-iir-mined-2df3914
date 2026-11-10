@@ -1,0 +1,10 @@
+# SOF eq_iir component: the IIR response blob (bytes control) through set_configuration, then audio, on the host scaffold.
+project: savantenvs/sof
+target: sof-eq-iir-mined-2df3914
+cmds:
+  - cmd: /mayhem/fuzz_eq_iir
+    libfuzzer: true
+    timeout: 10
+    testsuite:
+      - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+      - file://mayhem/sof-eq-iir-mined-2df3914/testsuite
